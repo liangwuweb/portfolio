@@ -1,0 +1,1028 @@
+#outer-container {
+  width:100vw;
+  height:100vh;
+  position: relative;
+  overflow: hidden;
+  background:#495057;
+}
+
+.main-nav {
+  height:100%;
+  position: fixed;
+  width:54px;
+  top:0;
+  left:0;
+  background: #212529;
+  z-index: 11;
+}
+
+.toggle-button {
+	position: fixed;
+	width: 40px;
+	height: 40px;
+  top: 15px;
+  left: 12px;
+	padding: 4px;
+	transition: .25s;
+	z-index: 15;
+}
+.toggle-button:hover {
+	cursor: pointer;
+}
+ .menu-bar {
+	position: absolute;
+	/* border-radius: 2px; */
+  width: 30%;
+	transition: .5s;
+}
+ .menu-bar-top {
+	border: 4px solid #999999;
+	border-bottom: none;
+	top: 0;
+
+}
+ .menu-bar-middle {
+	border: 4px solid #999999;
+  /* background-color: #999999; */
+  margin-top: 5px;
+  margin-bottom: 5px;
+  top: 4px;
+  border-bottom:none;
+}
+ .menu-bar-bottom {
+	border: 4px solid #999999;
+	border-top: none;
+	top: 18px;
+
+}
+/* .button-open {
+	left: 25px;
+} */
+.button-open .menu-bar-top {
+	/* border-color: #fff; */
+	transform: rotate(45deg) translate(6px, 8px);
+	transition: .5s;
+}
+.button-open .menu-bar-middle {
+	/* background-color: #fff; */
+	transform: translate(230px);
+	transition: .1s ease-in;
+	opacity: 0;
+}
+.button-open .menu-bar-bottom {
+	/* border-color: #fff; */
+	transform: rotate(-45deg) translate(5px, -7px);
+	transition: .5s;
+}
+
+.pusher {
+  background-color: #32373c;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 280px;
+  /* margin-left: -280px; */
+  transform: translate(-280px,0);
+  font-size: 1em;
+  font-weight: 700;
+  overflow: auto;
+  transition: all .5s ease;
+  z-index: 10;
+}
+
+.menu-show {
+    /* margin-left: 54px; */
+    /* transform: translate(54px,0); */
+    box-shadow: 4px 2px 15px 1px #191818;
+    margin-left: 334px;
+}
+
+.main-canvas {
+  position:relative;
+width: calc(100% - 54px);
+  /* width:100%; */
+  height:100%;
+  background:#495057;
+  /* transform: translate(54px,0); */
+  transition: all .5s ease;
+  margin-left: 54px;
+
+}
+
+.menu-open {
+    /* transform: translate(334px,0); */
+    width: calc(100% - 334px);
+    margin-left: 334px;
+    right:0;
+}
+
+
+
+.box {
+  width:50px;
+  height:50px;
+  background: #fff;
+  position:absolute;
+  /* left:50%;
+  top:50%;
+  margin-left: -25px;
+  margin-top:-25px; */
+  display: none;
+}
+
+#wrap {
+  position: absolute;
+      width: 50%;
+      padding-bottom: 50%;
+      height:0;
+      left: 50%;
+      top: 50%;
+      margin-left: -25%;
+      margin-top: -25%;
+}
+
+ #map{
+   position: absolute;
+       width: 100%;
+
+}
+
+#map svg {
+  /* z-index: 666;
+  position: absolute; */
+   stroke-dasharray: 2000px;
+   stroke-dashoffset: 2000px;
+   animation-name: draw;
+   animation-duration: 12s;
+   animation-fill-mode: forwards; // Stay on the last frame
+   animation-iteration-count: 1; // Run only once
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation-delay:3s;
+}
+
+#map svg #path123 {
+  stroke-dasharray: 2200;
+    stroke-dashoffset: 2200;
+    animation-duration: 5s;
+       animation-name: draw;
+       animation-fill-mode: forwards; // Stay on the last frame
+       animation-iteration-count: 1; // Run only once
+      animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.img {
+  background-image: url(../images/drone-img.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: contain;
+  height: 100%;
+  position: absolute;
+  top:0;
+  /* display: none; */
+  opacity: 0;
+  animation-name: show;
+  animation-delay: 7s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+.custom-select {
+  position: absolute;
+    font-family: Arial;
+    font-size: 12px;
+    width: 80%;
+    left: 20px;
+    /* border-radius: 50%; */
+    top: 30px;
+}
+.custom-select  select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.custom-select-2  select {
+  display: none; /*hide original SELECT element:*/
+}
+.select-selected {
+  background-color: none;
+}
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 10px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 10px 16px;
+  /* border: 1px solid transparent; */
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+  background: #2196F3;
+}
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: #29B6F6;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+.select-items div:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* #location .submit {
+  position: absolute;
+      left: 180px;
+      background: #FFC107;
+      border: none;
+      font-size: 11px;
+      padding: 6px;
+      color: #fff;
+      cursor: pointer;
+      font-family: sans-serif;
+      top: 80px;
+}
+
+#location .submit:hover {
+  background: #cc9f19;
+} */
+
+.custom-select:nth-of-type(2){
+  top:78px;
+}
+
+
+#location {
+  position: absolute;
+  width: 100%;
+}
+
+
+.button-a {
+  position:absolute;
+  width:50px;
+  height:50px;
+  left: 10px;
+
+}
+
+.button-b {
+  position:absolute;
+  width:50px;
+  height:50px;
+  left: 70px;
+}
+
+
+.button-c {
+  position:absolute;
+  width:50px;
+  height:50px;
+  left: 130px;
+}
+
+.button-d {
+  position:absolute;
+  width:50px;
+  height:50px;
+  left: 190px;
+}
+
+
+.button-a, .button-b, .button-c, .button-d {
+
+  /* background: #2d2e31; */
+  top: 140px;
+  border-radius: 50%;
+}
+
+
+.font {
+    font-family:monospace;
+    color:#fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.animate svg {
+    stroke-width: 1;
+    animation-name: draw;
+    animation-duration: 3.75s;
+    animation-fill-mode: forwards; // Stay on the last frame
+    animation-iteration-count: 1; // Run only once
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#routeOne{
+  stroke-dasharray: 1000px;
+  stroke-dashoffset: 1000px;
+  animation-duration: 4s;
+  position: absolute;
+  display: none
+}
+
+.a-pulse {
+	animation-name: pulse;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in;
+  /* background: black; */
+}
+
+.b-pulse {
+	animation-name: pulse;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in;
+  /* background: black; */
+}
+
+@keyframes pulse {
+	from {
+  transform: scale(1);
+		/* opacity: 0.8; */
+		/* top: 0; */
+	}
+	to {
+  transform: scale(2);
+		/* opacity: 0.2; */
+		/* top: -10px; */
+	}
+}
+
+
+.point-a {
+  top: 89%;
+  left: 20%;
+  margin-top: -10px;
+  margin-left: -10px;
+  height: 20px;
+  width: 20px;
+  background-color:  #FF5722;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  /* border:2px solid #000; */
+}
+
+.point-b {
+  top: 51%;
+  left: 53%;
+  margin-top: -10px;
+  margin-left: -10px;
+  height: 20px;
+  width: 20px;
+  background-color: #FF5722;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  /* border:3px solid #000; */
+  /* margin: 0px auto; */
+}
+
+.hide {
+  display:none;
+}
+
+ .map-copy, .point-area  {
+  position: absolute;
+  height:100%;
+  width:100%;
+}
+
+.pointA {
+  top: 89%;
+     left: 20%;
+     margin-top: -12px;
+     margin-left: -12px;
+     height: 20px;
+     width: 20px;
+     /* background-color: #FFEB3B; */
+     border-radius: 50%;
+     position: absolute;
+     z-index: 1;
+     border: 2px solid #FF5722;
+
+}
+
+.pointB {
+  top: 51%;
+  left: 53%;
+  margin-top: -12px;
+  margin-left: -12px;
+     height: 20px;
+     width: 20px;
+     /* background-color: #FFEB3B; */
+     border-radius: 50%;
+     position: absolute;
+     z-index: 1;
+     border: 2px solid #FF5722;
+}
+
+.selected {
+  background:#FFC107;
+}
+
+#routeTwo {
+  stroke-dasharray: 1000px;
+  stroke-dashoffset: 1000px;
+  animation-duration: 4s;
+  position: absolute;
+  display: none
+}
+
+#routeThree {
+  stroke-dasharray: 1800px;
+  stroke-dashoffset: 1800px;
+  animation-duration: 6s;
+  position: absolute;
+  display: none
+}
+
+#routeFour {
+  stroke-dasharray: 1000px;
+  stroke-dashoffset: 1000px;
+  animation-duration: 4s;
+  position: absolute;
+  display: none
+}
+
+.white-box {
+  width: 280px;
+  height: 450px;
+  background: #fff;
+  position: absolute;
+  top:300px;
+}
+
+.info-1 {
+  border-bottom: solid #d0cfcf 1px;
+  height: 80px;
+}
+
+
+.distance {
+  font-size: 12px;
+  margin: 35px 0 0 20px;
+  position: absolute;
+}
+
+.info-2 {
+  border-bottom: solid #d0cfcf 1px;
+  height: 80px;
+
+}
+
+.time {
+  font-size: 12px;
+  margin: 35px 0 0 20px;
+  position: absolute;
+}
+
+.info-3 {
+  border-bottom: solid #d0cfcf 1px;
+  height: 80px;
+}
+
+.carbon {
+  font-size: 12px;
+  margin: 35px 0 0 20px;
+  position: absolute;
+}
+
+/* .dis-data {
+  background-image: url(../images/distance.png);
+  background-repeat: no-repeat;
+  width: 40px;
+  background-size: contain;
+  height: 40px;
+  position: absolute;
+  left: 200px;
+  top: 20px;
+  display: none;
+} */
+
+p {
+  font-size: 12px;
+  font-weight: 300;
+  margin: 0 0 0 212px;
+  padding-top: 35px;
+}
+
+.time-data p {
+      margin: 0 0 0 211px;
+}
+
+/* .time-data {
+  background-image: url(../images/time.svg);
+  background-repeat: no-repeat;
+  width: 16px;
+  background-size: contain;
+  height: 20px;
+  position: absolute;
+  left: 208px;
+  top: 123px;
+  display: none;
+} */
+
+/* .carbon-data {
+  background-image: url(../images/carbon.svg);
+  background-repeat: no-repeat;
+  width: 40px;
+  background-size: contain;
+  height: 40px;
+  position: absolute;
+  left: 200px;
+  top: 183px;
+  display: none;
+} */
+
+.carbon-data p {
+    margin:0 0 0 211px;
+}
+
+/* .rec {
+  background: #FFC107;
+  width: 280px;
+  height: 33px;
+  position: absolute;
+  top: 30px;
+  z-index: -1;
+}
+
+.rec-2 {
+  background:#03A9F4;
+  width: 280px;
+  height: 33px;
+  position: absolute;
+  top: 63px;
+  z-index: -1;
+} */
+
+/* .dis-data-2 {
+  background-image: url(../images/distance2.svg);
+  background-repeat: no-repeat;
+  width: 40px;
+  background-size: contain;
+  height: 40px;
+  position: absolute;
+  left: 204px;
+  top: 20px;
+  display: none;
+} */
+
+
+
+/* .time-data-2 {
+  background-image: url(../images/time2.svg);
+  background-repeat: no-repeat;
+  width: 50px;
+  background-size: contain;
+  height: 45px;
+  position: absolute;
+  left: 205px;
+  top: 97px;
+  display: none;
+} */
+
+
+
+
+
+/* .dis-data-3 {
+  background-image: url(../images/distance3.svg);
+  background-repeat: no-repeat;
+  width: 50px;
+  background-size: contain;
+  height: 50px;
+  position: absolute;
+  left: 204px;
+  top: 15px;
+  display: none;
+} */
+
+
+/* .time-data-3 {
+  background-image: url(../images/time3.svg);
+  background-repeat: no-repeat;
+  width: 70px;
+  background-size: contain;
+  height: 47px;
+  position: absolute;
+  left: 209px;
+  top: 99px;
+  display: none;
+} */
+
+.time-data-3 p {
+margin: 17px 0 0 16px;
+}
+
+/* .carbon-data-3 {
+  background-image: url(../images/carbon3.svg);
+  background-repeat: no-repeat;
+  width: 50px;
+  background-size: contain;
+  height: 50px;
+  position: absolute;
+  left: 205px;
+  top: 183px;
+  display: none;
+} */
+
+
+
+.pic {
+  width:280px;
+  height:207px;
+  background:#32373c;
+  position: absolute;
+  bottom: 0;
+  background-image: url(../images/picture.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: none;
+}
+
+#dis-data-svg {
+  stroke-dasharray: 1000px;
+  stroke-dashoffset: 1000px;
+  animation-name: draw;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  /* display: none; */
+  position: absolute;
+  width: 80px;
+  top: 0;
+  left: 180px;
+}
+
+#time-data {
+  stroke-dasharray: 1000px;
+  stroke-dashoffset: 1000px;
+  animation-name: draw;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  /* display: none; */
+  position: absolute;
+  width: 80px;
+  top: 80px;
+  left: 180px;
+}
+
+#carbon-data {
+  stroke-dasharray: 1000px;
+  stroke-dashoffset: 1000px;
+  animation-name: draw;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  /* display: none; */
+  position: absolute;
+  width: 80px;
+  top: 160px;
+  left: 180px;
+}
+
+.dis-data {
+  display:none;
+}
+
+.time-data {
+  display: none;
+}
+
+.carbon-data {
+  display: none;
+}
+
+#line-1, #line-2, #line-3, #line-4 {
+  stroke-dasharray: 1000px;
+  stroke-dashoffset: 1000px;
+  animation-name: draw;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  display: none;
+  position: absolute;
+}
+
+
+#dis-data2-svg {
+  stroke-dasharray: 1000px;
+  stroke-dashoffset: 1000px;
+  animation-name: draw;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  /* display: none; */
+  position: absolute;
+  width: 80px;
+  top: 0;
+  left: 180px;
+}
+
+#time-data2-svg {
+  stroke-dasharray: 1000px;
+  stroke-dashoffset: 1000px;
+  animation-name: draw;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  /* display: none; */
+  position: absolute;
+  width: 80px;
+  top: 80px;
+  left: 180px;
+}
+
+.dis-data-2 {
+  display: none;
+}
+
+.dis-data-2 p {
+  margin-left: 211px;
+}
+
+.time-data-2 {
+  display: none;
+}
+.time-data-2 p {
+margin: 0 0 0 211px;
+}
+
+.carbon-data-2 p {
+  margin: 0 0 0 215px;
+
+}
+
+.carbon-data-2 {
+  display: none;
+}
+
+#carbon-data2-svg {
+  position: absolute;
+  width: 80px;
+  top: 160px;
+  left: 180px;
+}
+
+#dis-data3-svg {
+  stroke-dasharray: 1000px;
+  stroke-dashoffset: 1000px;
+  animation-name: draw;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  /* display: none; */
+  position: absolute;
+  width: 80px;
+  top: 0;
+  left: 180px;
+}
+
+.dis-data-3 {
+  display: none;
+}
+
+.dis-data-3 p {
+  margin-left: 211px;
+}
+
+#time-data3-svg {
+  stroke-dasharray: 1000px;
+  stroke-dashoffset: 1000px;
+  animation-name: draw;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  /* display: none; */
+  position: absolute;
+  width: 80px;
+  top: 80px;
+  left: 180px;
+}
+.time-data-3  {
+  display: none;
+}
+
+.time-data-3 p {
+margin: 0 0 0 211px;
+}
+
+#carbon-data3-svg {
+  stroke-dasharray: 1000px;
+  stroke-dashoffset: 1000px;
+  animation-name: draw;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  /* display: none; */
+  position: absolute;
+  width: 80px;
+  top: 160px;
+  left: 180px;
+}
+
+.carbon-data-3 {
+  display: none;
+}
+
+.carbon-data-3 p {
+    margin:0 0 0 211px;
+}
+
+#dis-data4-svg {
+  stroke-dasharray: 1000px;
+  stroke-dashoffset: 1000px;
+  animation-name: draw;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  /* display: none; */
+  position: absolute;
+  width: 80px;
+  top: 0;
+  left: 180px;
+}
+
+.dis-data-4 p {
+  margin-left: 214px;
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+ label[for="switch"] {
+  cursor: pointer;
+      text-indent: -9999px;
+      width: 50px;
+      height: 20px;
+      background: grey;
+      display: block;
+      border-radius: 100px;
+      position: absolute;
+      top: 214px;
+      left: 20px;
+}
+
+label[for="switch"]:after {
+  content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      background: #fff;
+      border-radius: 20px;
+      transition: 0.3s;
+}
+
+input:checked + label[for="switch"] {
+	background: #2196F3;
+}
+
+input:checked + label[for="switch"]:after {
+	left: calc(100% - 2px);
+	transform: translateX(-100%);
+}
+
+
+ label[for="switch2"] {
+  cursor: pointer;
+      text-indent: -9999px;
+      width: 50px;
+      height: 20px;
+      background: grey;
+      display: block;
+      border-radius: 100px;
+      position: absolute;
+      top: 252px;
+      left: 20px;
+}
+
+label[for="switch2"]:after {
+  content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      background: #fff;
+      border-radius: 20px;
+      transition: 0.3s;
+}
+
+input:checked + label[for="switch2"] {
+	background: #2196F3;
+}
+
+input:checked + label[for="switch2"]:after {
+	left: calc(100% - 2px);
+	transform: translateX(-100%);
+}
+
+
+.img2 {
+  background-image: url(../images/drone-n.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: contain;
+  height: 100%;
+  position: absolute;
+  top:0;
+  display: none;
+  opacity: 0;
+}
+
+.description {
+  font-size: 12px;
+  color: #a7a7a7;
+  font-weight: 300;
+  position: absolute;
+  top: 217px;
+  left: 85px;
+}
+
+
+
+.bike-station {
+  background-image: url(../images/bike-station.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: contain;
+  height: 100%;
+  position: absolute;
+  top:0;
+  display: none;
+  opacity: 0;
+}
+
+.discription-2 {
+    top: 256px;
+}
+
+#time-data4-svg {
+  stroke-dasharray: 1000px;
+  stroke-dashoffset: 1000px;
+  animation-name: draw;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  /* display: none; */
+  position: absolute;
+  width: 80px;
+  top: 80px;
+  left: 180px;
+}
+
+.time-data-4 p {
+margin: 0 0 0 211px;
+}
+
+.carbon-data-4 p {
+  margin: 0 0 0 215px;
+
+}
+
+#carbon-data4-svg {
+  position: absolute;
+  width: 80px;
+  top: 160px;
+  left: 180px;
+}
+
+.dis-data-4, .time-data-4, .carbon-data-4 {
+  display: none;
+}
