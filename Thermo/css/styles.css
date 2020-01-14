@@ -1,0 +1,116 @@
+
+section {
+    height: 100vh;
+    background: -moz-linear-gradient(-45deg, #d2ff52 0%, #91e842 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #d2ff52 0%,#91e842 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #d2ff52 0%,#91e842 100%);
+  position: relative;
+}
+
+svg {
+  width: 100px;
+    left: 50%;
+    top: 43%;
+    position: absolute;
+    margin-left: -50px;
+    margin-top: -132.25px;
+    transform: rotate(180deg);
+}
+
+.circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+  background: #8dde2f;
+  position: absolute;
+  /* top: 373px;
+  left: 365px; */
+  left: 50%;
+  top: 2%;
+  margin-left: -35px;
+  margin-top: 48px;
+}
+
+.waterColumn {
+  width:15px;
+  height:90px;
+  border-radius: 10px;
+  /* transform: rotate(90deg); */
+  background:#8dde2f;
+  position:absolute;
+  left: 47.5%;
+  top: 30%;
+}
+
+.canvas {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  background: rgb(45, 34, 51);
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -200px;
+  box-shadow: 0 10px 100px rgba(0,0,0,0.1), 0 10px 40px rgba(0,0,0,0.2);
+  transform: rotate(180deg);
+}
+
+.buttonLeft .fa-minus-circle {
+  color: #666;
+  font-size: 32px;
+  position: absolute;
+  top: 86%;
+  left: 20%;
+  transition: color 2s;
+}
+
+.buttonLeft .fa-minus-circle:hover {
+  color:#03a9f4;
+  transition: color 100ms;
+}
+
+.buttonMiddle .fa-power-off {
+  font-size:30px;
+  color:#666;
+  position:absolute;
+  top: 86%;
+  left: 46%;
+  transform: rotate(180deg);
+  transition: color 2s;
+}
+
+.buttonMiddle .fa-power-off:hover {
+  color: #8dde2f;
+    transition: color 100ms;
+}
+
+
+.buttonRight .fa-plus-circle {
+  font-size:32px;
+  color:#666;
+  top:86%;
+  left:70%;
+  position:absolute;
+  transition: color 2s;
+}
+
+.buttonRight .fa-plus-circle:hover {
+  color:#ff9800;
+  transition: color 100ms;
+}
+
+.warm {
+  background: -moz-linear-gradient(-45deg, #ff824d 0%, #ff450d 100%);
+  background: -webkit-linear-gradient(-45deg, #ff824d 0%,#ff450d 100%);
+  background: linear-gradient(135deg, #ff824d 0%,#ff450d 100%);
+  -webkit-transition: background-color 2s;
+  transition: background-color 2s;
+}
+
+.cool {
+  background: -moz-linear-gradient(-45deg, #a9daf7 0%, #0f9be7 100%);
+ background: -webkit-linear-gradient(-45deg, #a9daf7 0%,#0f9be7 100%);
+ background: linear-gradient(135deg, #a9daf7 0%,#0f9be7 100%);
+ -webkit-transition: background-color 2s;
+ transition: background-color 2s;
+}
