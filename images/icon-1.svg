@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="86.46" height="86.46" viewBox="0 0 86.46 86.46">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #231f20;
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <title>icon-1</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="mobile">
+      <g>
+        <rect class="cls-1" width="86.46" height="86.46"/>
+        <path class="cls-2" d="M61.48,40.05,55.66,22.13a2.94,2.94,0,0,0-2.79-2H34a3,3,0,0,0-2.8,2L25.4,40.05a2.93,2.93,0,0,0,.3,2.43l15.24,25a2.86,2.86,0,0,0,.69.74V43.06a6,6,0,1,1,3.63,0V68.22a3.25,3.25,0,0,0,.69-.74l15.25-25a2.92,2.92,0,0,0,.28-2.43Z"/>
+        <rect class="cls-3" x="25.27" y="13.53" width="37.04" height="61.73"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,578 @@
+.container {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.sectionOne {
+	width: 100%;
+	background-color: #231F20;
+	height: 100vh;
+}
+
+.socialMedia {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-top: 6px;
+}
+
+.socialMedia a {
+	width: 54px;
+	height: 54px;
+	background-color: #231f20;
+	margin-right: 20px;
+}
+
+.socialMedia a:nth-of-type(4) {
+	margin-right: 0;
+}
+
+.socialMedia .icon {
+	text-align: center;
+	color: rgb(255, 255, 255);
+	font-size: 28px;
+}
+
+.fab {
+	line-height: 54px !important;
+}
+
+h1 {
+	color: #EA3213;
+	font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+	font-family: 'Source Sans Pro', sans-serif;
+	text-align: center;
+}
+
+h2,
+h3 {
+	color: white;
+}
+
+h2 {
+	font-weight: 700;
+}
+
+h3 {
+	font-weight: 600;
+}
+
+h4 {
+	font-weight: 700;
+	font-size: 32px;
+}
+
+h5 {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+p {
+	line-height: 1.5;
+}
+
+.skillset {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.image {
+	background-size: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	padding-top: 100%;
+}
+
+.top {
+	display: flex;
+	justify-content: center;
+}
+
+.side-icon {
+	width: 25px;
+	height: 31px;
+	margin-right: 8px;
+}
+
+.image-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/*Animated arrow*/
+.arrow {
+	position: absolute;
+	/* top: 50%; */
+	transform: translate(-50%, -50%);
+	bottom: 25px;
+	left: 50%;
+	display: block;
+}
+
+.arrow span {
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-bottom: 4px solid #EA3213;
+	border-right: 4px solid #EA3213;
+	transform: rotate(45deg);
+	margin: -10px;
+	animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+	animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+	animation-delay: -0.4s;
+}
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+		transform: rotate(45deg) translate(-20px, -20px);
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+		transform: rotate(45deg) translate(20px, 20px);
+	}
+}
+
+
+/* MOBILE STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (max-width: 767px) {
+	.container {
+		width: 87.5%;
+		/* 280 pixels at a 320 pixel screen width (iPhone 3 / 4 / 5) */
+	}
+
+	.header {
+		margin-top: -170px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -118px;
+	}
+
+	.hero-logo {
+		margin-left: 21%;
+		margin-bottom: 40px;
+
+	}
+
+
+
+	h1 {
+
+
+		font-size: 32px;
+	}
+
+	h2 {
+		font-size: 22px;
+		margin-top: 30px;
+	}
+
+	h3 {
+		letter-spacing: .8px;
+		font-size: 17px;
+	}
+
+
+
+	.about {
+		padding-top: 60px;
+		margin-bottom: 60px;
+	}
+
+	h4 {
+
+		margin-bottom: 30px;
+	}
+
+
+	h5 {
+
+		font-size: 18px;
+
+	}
+
+	p {
+		text-align: left;
+		font-size: 14px;
+	}
+
+
+
+	.skillset {
+		margin-bottom: 40px;
+	}
+
+	.descri {
+		width: 67.8571428571429%;
+	}
+
+	.icon {
+		width: 90px;
+		margin-top: -6px;
+	}
+
+	.skills {
+		margin-bottom: 60px;
+	}
+
+	.project {
+		margin-bottom: 60px;
+	}
+
+	.map-bg {
+		background-image: url(../images/mobile/map.jpg);
+	}
+
+	.drew-bg {
+		background-image: url(../images/mobile/drew.jpg);
+	}
+
+	.hallmark-bg {
+		background-image: url(../images/mobile/hallmark.jpg);
+	}
+
+	.johnny-bg {
+		background-image: url(../images/mobile/johnny.jpg);
+	}
+
+	.chat-bg {
+		background-image: url(../images/mobile/chat.jpg);
+	}
+
+	.registration-bg {
+		background-image: url(../images/mobile/registration.jpg);
+	}
+
+	.city-bg {
+		background-image: url(../images/mobile/city.jpg);
+	}
+
+	.therometer-bg {
+		background-image: url(../images/mobile/therometer.jpg);
+	}
+
+	.design-bg {
+		background-image: url(../images/mobile/design.jpg);
+	}
+
+	.principle-bg {
+		background-image: url(../images/mobile/principle.jpg);
+	}
+
+
+	.contact {
+		margin-bottom: 90px;
+	}
+
+	.image-wrap {
+		width: 100%;
+		/* margin-left: 31.1111111111111%; */
+	}
+
+	.image-wrap:nth-of-type(1),
+	.image-wrap:nth-of-type(2) {
+		margin-bottom: 30px;
+	}
+
+}
+
+/* TABLET STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.container {
+		width: 93.75%;
+		/* 720 pixels at a 768 pixel screen width (iPads) */
+	}
+
+	.header {
+		margin-top: -196.5px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -129.26px;
+	}
+
+	.hero-logo {
+		margin-left: 21%;
+		margin-bottom: 40px;
+		width: 150px;
+	}
+
+	h1 {
+
+		font-size: 35px;
+	}
+
+	h2 {
+		font-size: 24px;
+		margin-top: 36px;
+	}
+
+	h3 {
+		font-size: 20px;
+	}
+
+	h4 {
+
+
+		margin-bottom: 40px;
+	}
+
+	h5 {
+
+		font-size: 18px;
+		text-align: center;
+	}
+
+	.about {
+		padding-top: 80px;
+		margin-bottom: 80px;
+	}
+
+	p {
+		text-align: left;
+		font-size: 18px;
+		width: 65.5555555555556%;
+		margin-left: 17.2222222222222%;
+	}
+
+	.skills {
+		margin-bottom: 80px;
+	}
+
+	.allSkills {
+		display: flex;
+
+	}
+
+	.skillset p {
+		width: 100%;
+		text-align: center;
+		margin-left: 0;
+
+	}
+
+	.skillset {
+		width: 22.5%;
+		margin-right: 3.3333333333333%;
+	}
+
+	.skillset:nth-of-type(4) {
+		margin-right: 0;
+	}
+
+	.image-wrap {
+		width: 30.888889%;
+		/* margin-left: 31.1111111111111%; */
+	}
+
+	.map-bg {
+		background-image: url(../images/mobile/map.jpg);
+	}
+
+	.drew-bg {
+		background-image: url(../images/mobile/drew.jpg);
+	}
+
+	.hallmark-bg {
+		background-image: url(../images/mobile/hallmark.jpg);
+	}
+
+	.johnny-bg {
+		background-image: url(../images/mobile/johnny.jpg);
+	}
+
+	.chat-bg {
+		background-image: url(../images/mobile/chat.jpg);
+	}
+
+	.registration-bg {
+		background-image: url(../images/mobile/registration.jpg);
+	}
+
+	.city-bg {
+		background-image: url(../images/mobile/city.jpg);
+	}
+
+	.therometer-bg {
+		background-image: url(../images/mobile/therometer.jpg);
+	}
+
+	.design-bg {
+		background-image: url(../images/mobile/design.jpg);
+	}
+
+	.principle-bg {
+		background-image: url(../images/mobile/principle.jpg);
+	}
+
+	.project {
+		margin-bottom: 80px;
+	}
+
+	.contact {
+		margin-bottom: 40px;
+	}
+
+
+}
+
+/* DESKTOP STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 1024px) {
+	.container {
+		/*width:95.5%;*/
+		width: 978px;
+	}
+
+	.header {
+		margin-top: -198px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -150.795px;
+	}
+
+	.hero-logo {
+		margin-left: 23%;
+		margin-bottom: 40px;
+		width: 163px;
+	}
+
+	h1 {
+		font-size: 38px;
+	}
+
+	h2 {
+		font-size: 28px;
+		margin-top: 48px;
+	}
+
+	h3 {
+		font-size: 22px;
+	}
+
+	h4 {
+		margin-bottom: 50px;
+	}
+
+	h5 {
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.about {
+		padding-top: 100px;
+		margin-bottom: 100px;
+	}
+
+	p {
+		font-size: 18px;
+	}
+
+	.about p {
+		width: 642px;
+		text-align: left;
+		margin-left: 168px;
+	}
+
+	.skills {
+		margin-bottom: 100px;
+	}
+
+	.allSkills {
+		display: flex;
+
+	}
+
+	.skillset {
+		width: 222px;
+		margin-right: 30px;
+		;
+	}
+
+	.skillset:nth-of-type(4) {
+
+		margin-right: 0;
+	}
+
+	.icon {
+		margin-bottom: 15px;
+	}
+
+	.image-wrap {
+		width: 280px;
+		height: 280px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.map-bg {
+		background-image: url(../images/mobile/map.jpg);
+	}
+
+	.drew-bg {
+		background-image: url(../images/mobile/drew.jpg);
+	}
+
+	.hallmark-bg {
+		background-image: url(../images/mobile/hallmark.jpg);
+	}
+
+	.johnny-bg {
+		background-image: url(../images/mobile/johnny.jpg);
+	}
+
+	.chat-bg {
+		background-image: url(../images/mobile/chat.jpg);
+	}
+
+	.registration-bg {
+		background-image: url(../images/mobile/registration.jpg);
+	}
+
+	.city-bg {
+		background-image: url(../images/mobile/city.jpg);
+	}
+
+	.therometer-bg {
+		background-image: url(../images/mobile/therometer.jpg);
+	}
+
+	.design-bg {
+		background-image: url(../images/mobile/design.jpg);
+	}
+
+	.principle-bg {
+		background-image: url(../images/mobile/principle.jpg);
+	}
+
+	.project {
+		margin-bottom: 100px;
+	}
+
+	.contact {
+		margin-bottom: 40px;
+	}
+}
