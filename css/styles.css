@@ -113,7 +113,6 @@ p {
 /*Animated arrow*/
 .arrow {
 	position: absolute;
-	/* top: 50%; */
 	transform: translate(-50%, -50%);
 	bottom: 25px;
 	left: 50%;
@@ -124,8 +123,8 @@ p {
 	display: block;
 	width: 20px;
 	height: 20px;
-	border-bottom: 4px solid #EA3213;
-	border-right: 4px solid #EA3213;
+	border-bottom: 4px solid #ffc107d4;
+	border-right: 4px solid #ffc107d4;
 	transform: rotate(45deg);
 	margin: -10px;
 	animation: animate 2s infinite;
@@ -155,6 +154,49 @@ p {
 	}
 }
 
+/* Image overlay */
+.overlay-wrap {
+	position: relative;
+	width: 50%;
+}
+
+.over-image {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: #ffc107d4;
+}
+
+.overlay-wrap:hover .overlay {
+	opacity: 1;
+}
+
+.text {
+	color: #000;
+	font-size: 16px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-family: 'Source Sans Pro',
+		sans-serif;
+	width: 80%;
+}
 
 /* MOBILE STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media only screen and (max-width: 767px) {
